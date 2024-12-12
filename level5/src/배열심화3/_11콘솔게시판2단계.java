@@ -37,6 +37,27 @@ public class _11콘솔게시판2단계 {
 			System.out.print("[2]이후     ");
 			System.out.println("[3]추가하기");
 			System.out.print("[4]삭제하기             ");
+			System.out.println("---------------------------");
+			System.out.print("[번호] - 제목");
+			System.out.printf("      [총 게시글 %d 개]\n", count);
+			System.out.println("---------------------------");
+			System.out.println();
+			if (board == null) {
+				System.out.println("등록된 게시물이 없습니다.");
+				System.out.println();
+			} else {
+				for (int i = startRow; i <= endRow; i++) {
+					System.out.printf("[%4d] - %s\n", i, board[i - 1][0]);
+					System.out.println();
+				}
+			}
+			System.out.println("---------------------------");
+			System.out.printf("현제 페이지 [%d / %d]\n", curPageNum, pageCount);
+			System.out.println("---------------------------");
+			System.out.println("[1]이전");
+			System.out.println("[2]이후");
+			System.out.println("[3]추가하기");
+			System.out.println("[4]삭제하기");
 			System.out.println("[5]내용확인");
 			System.out.print("번호 입력 (0.종료) >> ");
 			int sel = sc.nextInt();
