@@ -1,6 +1,5 @@
 package 배열심화3;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -224,8 +223,6 @@ public class _18크레이지아케이드1단계 {
 						map[bombs[0][0] - 1][i] = BOMBEVENT;
 						}
 					}
-					System.out.println(Arrays.deepToString(bombs));
-					System.out.println(Arrays.deepToString(temp));
 					bombSet--;
 					for (int i = 0; i < bombSet; i++)
 						bombs[i] = bombs[i + 1];
