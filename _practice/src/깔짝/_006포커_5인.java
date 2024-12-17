@@ -606,7 +606,7 @@ public class _006포커_5인 {
 				}
 			}
 			if (money[4] == 0) {
-				System.out.println("다 꼴았으니 충전 해드립니다..");
+				System.out.println("다 잃었으니 충전 해드립니다..");
 				money[4] = 10000000;
 			}
 			System.out.println("1.새 게임   2.판돈 설정 후 새 게임   0.종료");
