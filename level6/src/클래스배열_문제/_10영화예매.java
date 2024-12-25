@@ -67,7 +67,7 @@ public class _10영화예매 {
 				System.out.printf("===== 회원 %s 예약 조회 =====\n", id);
 
 				for (Seat s : sList) {
-					if (s.userId != null && s.userId.equals(id)) {
+					if (id.equals(s.userId)) {
 						System.out.printf("[%4s ]", s.userId);
 						priceTotal += s.price;
 					} else
