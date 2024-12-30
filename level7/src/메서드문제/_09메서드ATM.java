@@ -109,6 +109,10 @@ class Bank {
 				System.out.println("존재하지 않는 ID 입니다.");
 		}
 	}
+	
+	void logOut() {
+		log = -1;
+	}
 
 	void depositMoney() {
 		arMoney[log] += getNumber("입금금액", 1, 100000000);
@@ -160,7 +164,7 @@ class Bank {
 		return false;
 	}
 
-	boolean isAble(int log, int select) {
+	boolean isSelectError(int log, int select) {
 		if (log == -1 && (select == 2 || select == 4 || select == 5 || select == 6)) {
 			System.out.println("로그인 후 이용 가능");
 		} else if (log != -1 && (select == 1 || select == 3)) {
@@ -170,9 +174,9 @@ class Bank {
 		} else if (select == 5 && arMoney[log] == 0) {
 			System.out.println("통장 잔고가 0원이라 이체가 불가능합니다.");
 		} else {
-			return true;
+			return false;
 		}
-		return false;
+		return true;
 
 	}
 
@@ -181,7 +185,7 @@ class Bank {
 		while (true) {
 			showMenu();
 			int select = getNumber("메뉴", 1, 7);
-			if (!isAble(log, select))
+			if (isSelectError(log, select))
 				continue;
 
 			System.out.printf("=== %s === \n", menu[select - 1]);
@@ -192,7 +196,7 @@ class Bank {
 			else if (select == 3)
 				logIn();
 			else if (select == 4)
-				log = -1;
+				logOut();
 			else if (select == 5)
 				depositMoney();
 			else if (select == 6)
