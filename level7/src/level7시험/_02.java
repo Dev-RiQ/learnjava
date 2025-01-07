@@ -60,6 +60,7 @@ class Racing {
 			horses[i] = new Horse();
 			horses[i].setName(name[i]);
 			track[i][horses[i].getPos()] = 1;
+			
 		}
 	}
 
@@ -71,7 +72,7 @@ class Racing {
 		}
 		System.out.println();
 	}
-
+	
 	void moveRandom() {
 		Random rd = new Random();
 		for (int i = 0; i < size; i++) {
