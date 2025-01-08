@@ -33,26 +33,32 @@ public class _02ArrayList클래스 {
 		System.out.println(list);
 		System.out.println(list.size());
 		System.out.println();
-		for(int value : arr)
+		for (int value : arr)
 			list.add(value);
 		System.out.println(list.size());
-		for(int i = 0 ; i < list.size() ; i++)
-			System.out.print(list.get(i)+" ");
+		for (int i = 0; i < list.size(); i++)
+			System.out.print(list.get(i) + " ");
 		System.out.println();
 		System.out.println("=====");
 		System.out.println(list.remove(0));
 		System.out.println(list.remove(Integer.valueOf(20)));
 		System.out.println("=====");
-		list.add(0,100);
+		list.add(0, 100);
 //		list.add(10,100);
 		System.out.println(list);
-		list.set(1,1000);
+		list.set(1, 1000);
 		System.out.println(list);
 		System.out.println(list.size());
 		System.out.println(list);
-		for(int i = 0 ; i< 10; i++)
-			list.add(i+1);
+		System.out.println(list.size());
+		for (int i = 0; i < 7; i++)
+			list.add(i + 1);
 		System.out.println(list);
+		System.out.println(list.size());
+		for (int i = 4; i > 0; i--)
+			list.remove(i + 1);
+		System.out.println(list);
+		System.out.println(list.size());
 	}
 
 }
