@@ -16,7 +16,7 @@ public class _04ArrayList주의사항 {
 		
 		System.out.println(list);
 		for(int i = 0; i < list.size(); i++) {
-			if(list.get(i) == 3) {
+			if(list.get(i) == 2) {
 				list.remove(i);
 				i--;
 			}
